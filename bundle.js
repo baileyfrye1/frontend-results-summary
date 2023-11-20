@@ -76,7 +76,7 @@ eval("module.exports = \"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3d
   \***********************/
 /***/ ((module) => {
 
-eval("module.exports = JSON.parse('[{\"category\":\"Reaction\",\"score\":80,\"icon\":\"../assets/images/icon-reaction.svg\"},{\"category\":\"Memory\",\"score\":92,\"icon\":\"../assets/images/icon-memory.svg\"},{\"category\":\"Verbal\",\"score\":61,\"icon\":\"../assets/images/icon-verbal.svg\"},{\"category\":\"Visual\",\"score\":72,\"icon\":\"../assets/images/icon-visual.svg\"}]');\n\n//# sourceURL=webpack://webpack-starter/./src/data.json?");
+eval("module.exports = JSON.parse('[{\"category\":\"Responsiveness\",\"score\":15,\"icon\":\"../assets/images/icon-reaction.svg\"},{\"category\":\"Thoughts\",\"score\":46,\"icon\":\"../assets/images/icon-memory.svg\"},{\"category\":\"Speech\",\"score\":55,\"icon\":\"../assets/images/icon-verbal.svg\"},{\"category\":\"Perception\",\"score\":24,\"icon\":\"../assets/images/icon-visual.svg\"}]');\n\n//# sourceURL=webpack://webpack-starter/./src/data.json?");
 
 /***/ })
 
