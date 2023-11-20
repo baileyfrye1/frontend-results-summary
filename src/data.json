@@ -1,22 +1,22 @@
 [
   {
-    "category": "Responsiveness",
-    "score": 15,
+    "category": "Reaction",
+    "score": 80,
     "icon": "../assets/images/icon-reaction.svg"
   },
   {
-    "category": "Thoughts",
-    "score": 46,
+    "category": "Memory",
+    "score": 92,
     "icon": "../assets/images/icon-memory.svg"
   },
   {
-    "category": "Speech",
-    "score": 55,
+    "category": "Verbal",
+    "score": 61,
     "icon": "../assets/images/icon-verbal.svg"
   },
   {
-    "category": "Perception",
-    "score": 24,
+    "category": "Visual",
+    "score": 72,
     "icon": "../assets/images/icon-visual.svg"
   }
 ]
