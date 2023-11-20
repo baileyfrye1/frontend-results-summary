@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /* Neutral */
+    --clr-white: 0, 0%, 100%;
+    --clr-pale-blue: 221, 100%, 96%;
+    --clr-light-lavender: 241, 100%, 89%;
+    --clr-gray-blue: 224, 30%, 27%;
+    /* Primary */
+    --clr-light-red: 0, 100%, 67%;
+    --clr-orange-yellow: 39, 100%, 56%;
+    --clr-green-teal: 166, 100%, 37%;
+    --clr-cobalt-blue: 234, 85%, 45%;
+    --clr-button: hsl(226, 28%, 27%);
+    /* Gradients */
+    --clr-slate-blue: hsl(252, 100%, 67%);
+    --clr-royal-blue: hsl(241, 81%, 54%);
+    --clr-purple-gradient: linear-gradient(to bottom, var(--clr-slate-blue), var(--clr-royal-blue));
+    --clr-violet-blue: hsla(256, 72%, 46%, 1);
+    --clr-persian-blue: hsla(241, 72%, 46%, 0);
+    --clr-circle-gradient: linear-gradient(to bottom, var(--clr-violet-blue), var(--clr-persian-blue));
+    /* Font Size */
+    --font-size-body: 1.125rem;
+}
+
+/* CSS RESET ================================== */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* END OF CSS RESET ============================ */
+main {
+  height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .card__result {
+    background: var(--clr-purple-gradient);
+    height: 80%;
+    width: 100%;
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: hsl(var(--clr-white));
+    .card__result__subtext {
+      font-size: 1.25rem;
+      color: hsla(var(--clr-pale-blue), .8);
+    }
+    .card__result__circle {
+      background: var(--clr-circle-gradient);
+      aspect-ratio: 1 / 1;
+      width: 200px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .card__result__score {
+        font-size: 5rem;
+        .card__result__max {
+          display: block;
+          font-weight: 500;
+          font-size: 1.125rem;
+          color: hsla(var(--clr-white), .4);
+        }
+      }
+    }
+    .card__result__body {
+      text-align: center;
+      .card__result__rating {
+        margin-bottom: 1rem;
+        font-weight: 500;
+        font-size: 1.75rem;
+      }
+      .card__result__description {
+        width: 55%;
+        margin-inline: auto;
+        font-weight: 500;
+        opacity: 70%;
+      }
+    }
+  }
+  .card__summary {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    .card__summary__breakdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 100%;
+      .card__summary__category {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+        .category__label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .category__icon {
+            height: 30px;
+          }
+          .category__title {
+            margin-left: .5rem;
+            font-size: 1.25rem;
+          }
+        }
+        .category__score {
+          color: #000;
+          font-size: var(--font-size-body);
+        }
+        .category__score__max {
+          opacity: 40%;
+        }
+      }
+      .category--reaction {
+        background: hsla(var(--clr-light-red), .1);
+        color: hsl(var(--clr-light-red));
+      }
+      .category--memory {
+        background: hsla(var(--clr-orange-yellow), .1);
+        color: hsl(var(--clr-orange-yellow));
+      }
+      .category--verbal {
+        background: hsla(var(--clr-green-teal), .1);
+        color: hsl(var(--clr-green-teal));
+      }
+      .category--visual {
+        background: hsla(var(--clr-cobalt-blue), .1);
+        color: hsl(var(--clr-cobalt-blue));
+      }
+    }
+    .card__summary__button {
+      text-decoration: none;
+      text-align: center;
+      color: hsl(var(--clr-pale-blue));
+      font-size: var(--font-size-body);
+      background: var(--clr-button);
+      padding: 1em 1.5em;
+      border-radius: 40px;
+      width: 100%;
+      &:hover {
+        background: var(--clr-purple-gradient);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    border-radius: 20px;
+    height: 500px;
+    width: auto;
+    box-shadow: 40px 0px 80px hsla(var(--clr-cobalt-blue), .1);
+    .card__result {
+      height: 100%;
+      width: 50%;
+      border-radius: 20px;
+      padding-block: 1rem;
+      .card__result__body {
+        .card__result__description {
+          width: 60%;
+        }
+      }
+    }
+    .card__summary {
+      width: 50%;
+      .card__summary__header {
+        font-weight: 500;
+      }
+      .card__summary__breakdown {
+        justify-content: center;
+        .card__summary__category {
+          height: auto;
+          .category__label {
+            .category__icon {
+              height: 20px;
+            }
+            .category__title {
+              font-size: 1.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
