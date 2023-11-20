@@ -1,21 +1,21 @@
 [
   {
-    "category": "Reaction",
+    "category": "Responsiveness",
     "score": 15,
     "icon": "../assets/images/icon-reaction.svg"
   },
   {
-    "category": "Memory",
+    "category": "Thoughts",
     "score": 46,
     "icon": "../assets/images/icon-memory.svg"
   },
   {
-    "category": "Verbal",
+    "category": "Speech",
     "score": 55,
     "icon": "../assets/images/icon-verbal.svg"
   },
   {
-    "category": "Visual",
+    "category": "Perception",
     "score": 24,
     "icon": "../assets/images/icon-visual.svg"
   }
